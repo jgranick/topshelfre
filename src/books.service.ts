@@ -19,8 +19,8 @@ export class BooksService {
   addBook(book: Book): void {
     if (!this.bookMap.has(book.id))
     {
-        this.bookMap.set(book.id, book);
-        this.bookList.push(book);
+      this.bookMap.set(book.id, book);
+      this.bookList.push(book);
     }
   }
 
@@ -28,9 +28,9 @@ export class BooksService {
     let book = this.bookMap.get(id);
     if (book)
     {
-        this.bookMap.delete(id);
-        const index = this.bookList.indexOf(book);
-        this.bookList.splice(index, 1);
+      this.bookMap.delete(id);
+      const index = this.bookList.indexOf(book);
+      this.bookList.splice(index, 1);
     }
   }
 }
